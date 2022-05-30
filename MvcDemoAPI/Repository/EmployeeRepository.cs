@@ -35,7 +35,7 @@ namespace MvcDemoAPI.Repository
 
         public override List<EmpModelAPI> Index()
         {
-            return dbcontext.Database.SqlQuery<EmpModelAPI>(@"EXEC [dbo].[Getall]").ToList();
+            return dbcontext.tblEmployee.ToList();
         }
         public override EmpModelAPI Edit(int id)
         {
